@@ -7,6 +7,7 @@
 .grid-container {
   font-family: "Raleway", sans-serif;
   max-width: 2000px;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   display: grid;
@@ -34,9 +35,9 @@
 
 .grid-container .sidebar {
   grid-area: sidebar;
-  height: 800px;
+  height: 830px;
   width: 200px;
-  background: #2b2a2a07;
+  background: rgb(231, 234, 243);
   text-align: start;
   display: inline;
   justify-content: center;
@@ -56,9 +57,9 @@
 
 .grid-container .productos {
   grid-area: productos;
-  height: 800px;
+  height: 830px;
   width: 800px;
-  background: #2b2a2a07;
+  background: rgb(231, 234, 243);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -73,6 +74,7 @@
   background: white;
   text-align: center;
   line-height: 25px;
+  border-radius: 25px;
 }
 
 .productos span {
@@ -107,4 +109,27 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-areas:
+      "navbar navbar"
+      "sidebar sidebar"
+      "productos productos"
+      "footer footer";
+  }
+
+  .sidebar h3 ul li {
+    text-align: center;
+    width: 100%;
+  }
+
+  .productos .card {
+    width: 90%;
+  }
+
+  .footer {
+    align-items: end;
+  }
 }
