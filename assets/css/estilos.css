@@ -110,26 +110,3 @@ button:hover {
   align-items: center;
   justify-content: center;
 }
-
-@media screen and (max-width: 768px) {
-  .grid-container {
-    grid-template-areas:
-      "navbar navbar"
-      "sidebar sidebar"
-      "productos productos"
-      "footer footer";
-  }
-
-  .sidebar h3 ul li {
-    text-align: center;
-    width: 100%;
-  }
-
-  .productos .card {
-    width: 90%;
-  }
-
-  .footer {
-    align-items: end;
-  }
-}
